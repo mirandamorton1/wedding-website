@@ -22,11 +22,29 @@ header{
 }
 
 header .heading{
-    font-size: 3rem;
+    font-size: 5rem;
+    color:rgb(105, 101, 101);
     padding: 1rem;
     text-align: center;
-    cursor: pointer;
+    cursor: auto;
+    letter-spacing: .5rem;
 
+}
+
+header .date{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    cursor:auto;
+    letter-spacing: .25rem;
+}
+
+header #circle{
+    font-size: .5rem;
+    color:rgb(105, 101, 101);
+    padding: .5rem;
 }
 
 header .navbar ul{
@@ -43,8 +61,9 @@ header .navbar ul li{
 }
 
 header .navbar ul li a{
-    font-size: 2rem;
-    color:black;
+    font-size: 1.75rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
 
 }
 
