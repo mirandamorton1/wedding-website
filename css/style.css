@@ -14,8 +14,14 @@ html{
     overflow-x: hidden;
 }
 
+section{
+    padding:0 7%;
+    padding-top: 25rem;
+}
+
+
 header{
-    position: fixed;
+    position:relative;
     top:0; left:0;
     z-index: 1000;
     width: 100%;
@@ -54,6 +60,7 @@ header .navbar ul{
     list-style: none;
     padding: 1rem;
     cursor: default;
+    flex-wrap:wrap;
 }
 
 header .navbar ul li{
@@ -71,6 +78,77 @@ header .navbar ul li a:hover{
     border-bottom: 2px solid rgb(105, 101, 101);
     
 }
+
+.story{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.story .content{
+    flex: 1 1 40rem
+}
+
+.story .content h1{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+}
+
+.story .content p{
+    font-size: 1.8rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+}
+
 .active {
     border-bottom: 2px solid black;
+}
+
+/* media queries */
+
+@media (max-width:500px){
+    html{
+        font-size: 50%;
+    }
+
+    header{
+        display: felx;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    header #circle{
+        display:block;
+
+    }
+
+    header .navbar{
+        position: fixed;
+        top:6 .2rem; right:0;
+        height: 100%;
+        width: 100%;
+    }
+
+    header .navbar ul{
+        height:100%;
+        width:100%;
+        flex-flow: column;
+        padding-bottom: 15rem;
+    }
+
+    header .navbar ul li{
+        text-align: center;
+        width:100%;
+        margin:1rem 0;
+    }
+
+    header .navbar ul li a{
+        font-size: 2rem;
+        display: block;
+    }
+
 }
