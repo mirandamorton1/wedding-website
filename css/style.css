@@ -60,11 +60,12 @@ header .navbar ul{
     list-style: none;
     padding: 1rem;
     cursor: default;
-    flex-wrap:wrap;
+    flex-wrap:;
 }
 
 header .navbar ul li{
     margin:0 1.5rem;
+    justify-content:space-between;
 }
 
 header .navbar ul li a{
