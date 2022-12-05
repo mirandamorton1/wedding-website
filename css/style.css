@@ -151,12 +151,6 @@ button {
     text-align: center;
 }
 
-.details{
-    padding-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 .details1{
     padding-top: 2rem;
     display:inline-flex;
@@ -217,6 +211,37 @@ button {
 
 .details2 .content2 p{
     font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+}
+
+.travel{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.travel .content{
+    flex: 1 1 40rem
+}
+
+.travel .content h1{
+    font-size: 3rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+}
+
+.travel .content h3{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+}
+
+.travel .content p{
+    font-size: 1.8rem;
     color:rgb(105, 101, 101);
     letter-spacing: .25rem;
 }
