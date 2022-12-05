@@ -60,7 +60,7 @@ header .navbar ul{
     list-style: none;
     padding: 1rem;
     cursor: default;
-    flex-wrap:;
+    flex-wrap:wrap;
 }
 
 header .navbar ul li{
@@ -104,8 +104,121 @@ header .navbar ul li a:hover{
     letter-spacing: .25rem;
 }
 
+.hero {
+    height: 800px;
+    background-position: no-repeat;
+    background-size: cover;
+    position:relative;
+    background-image: url("../images/homephoto.png");
+
+}
+
 .active {
     border-bottom: 2px solid black;
+}
+
+.placetime{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.placetime .content{
+    flex: 1 1 40rem
+}
+
+.placetime h1{
+    font-size: 4rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+}
+
+.btn_wrapper {
+    display: block;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(105, 101, 101);
+    color:white;
+    padding:10px;
+    margin: 24px;
+    font-size: 20px;
+    letter-spacing: .5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.details{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.details1{
+    padding-top: 2rem;
+    display:inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    float:left;
+}
+
+.details2{
+    padding-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    float:right;
+}
+
+.details1 .content1{
+    flex: 1 1 40rem;
+}
+
+.details1 .content1 h1{
+    font-size: 3rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: .25rem;
+}
+
+.details1 .content1 h3{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    
+}
+
+.details1 .content1 p{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+}
+
+.details2 .content2{
+    flex: 1 1 40rem
+}
+
+.details2 .content2 h1{
+    font-size: 3rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: .25rem;
+}
+
+.details2 .content2 h3{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    
+}
+
+.details2 .content2 p{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
 }
 
 /* media queries */
