@@ -246,6 +246,30 @@ button {
     letter-spacing: .25rem;
 }
 
+.shuttle{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.shuttle .content{
+    flex: 1 1 40rem
+}
+
+.shuttle .content h1{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+}
+
+.shuttle .content p{
+    font-size: 1.8rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+}
+
 /* media queries */
 
 @media (max-width:500px){
