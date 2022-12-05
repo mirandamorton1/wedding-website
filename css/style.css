@@ -233,6 +233,12 @@ button {
     margin-bottom: 2rem;
 }
 
+.travel .content h2{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+}
+
 .travel .content h3{
     font-size: 2rem;
     color:rgb(105, 101, 101);
@@ -268,6 +274,46 @@ button {
     font-size: 1.8rem;
     color:rgb(105, 101, 101);
     letter-spacing: .25rem;
+}
+
+.todo{
+    padding-top: 2rem;
+    display:block;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.todo .content{
+    flex: 1 1 40rem;
+}
+
+.todo .content h1{
+    font-size: 3rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+}
+
+.todo .content h2{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+}
+
+.todo .content h3{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+}
+
+.todo .content p{
+    font-size: 1.8rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+}
+
+#todobtn {
 }
 
 /* media queries */
