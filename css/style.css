@@ -80,6 +80,23 @@ header .navbar ul li a:hover{
     
 }
 
+#count-body{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    color:rgb(105, 101, 101);
+}
+
+#count-body h1{
+    font-size: 2rem;
+    padding-right: 4rem;
+    letter-spacing: .25rem;
+}
+
+#count-body p{
+    font-size: 2rem;
+}
+
 .story{
     padding-top: 2rem;
     display: flex;
@@ -313,7 +330,18 @@ button {
     letter-spacing: .25rem;
 }
 
-#todobtn {
+.party {
+    align-items: center;
+}
+
+.party .content {
+    
+}
+
+.party .content p{
+    font-size: 1.8rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
 }
 
 /* media queries */
