@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.3"
-  }
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "wedding-website",
+  "description": "A wedding registry website similar to theknot.com that allows couples to register for their wedding, provide their guests with information regarding their wedding, and allow guests to RSVP on their site.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirandamorton1/wedding-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirandamorton1/wedding-website/issues"
+  },
+  "homepage": "https://github.com/mirandamorton1/wedding-website#readme"
 }
