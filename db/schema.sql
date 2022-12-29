@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS wedding_db;
+CREATE DATABASE wedding_db;
+
+USE wedding_db;
+
+CREATE TABLE guests (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  attending BOOLEAN NOT NULL
+);
