@@ -386,3 +386,45 @@ button {
     }
 
 }
+.formContainer {
+    /* border:solid black;
+    border-width: 1px; */
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+   }
+   
+   .todayCard {
+       border: solid black;
+       border-width: 1px;
+       display: inline-block;
+       margin-top: 10px;
+   }
+   
+   #city {
+       font-size:30px;
+   }
+   
+   #time {
+       font-size: 25px;
+   }
+   
+   .card {
+       display:inline-block;
+   }
+   
+   .five-day {
+       align-items: right;
+   }
+   
+   .background-red {
+       color: red;
+   }
+   
+   .background-green {
+       color: green;
+   }
+   
+   .background-yellow {
+       color: yellow;
+   }

@@ -42,7 +42,7 @@ function renderSearchHistory(){
     
     
     //History Feature .. use local storage
-    getSearchHistory();
+    // getSearchHistory();
 
 
 function getIcon(iconType) {
@@ -59,7 +59,7 @@ $("#searchBtn").click(function (event){
 
     var userInput = $("#userInput").val();
     console.log(userInput);
-    addToHistory(userInput);
+    // addToHistory(userInput);
 
     // searchHistory.text(userInput + " " + currentDate);
 
@@ -72,7 +72,7 @@ function fetchLocation(userInput) {
     // fetch Weather(data we recieved from fetchlocation)
     console.log(userInput)
     fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" + userInput + '&units=imperial&appid=2b4f64abd099e1c41243e3911cd18532'
+        "https://api.openweathermap.org/data/2.5/weather?lat=44.8408&lon=-93.2983&units=imperial&appid=2b4f64abd099e1c41243e3911cd18532"
     )
         .then(function (response){
             return response.json()
