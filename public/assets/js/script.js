@@ -36,3 +36,6 @@ const countdownInterval = setInterval(function() {
   }
 // Every 1000 milliseconds the counter text renews
 }, 1000);
+
+
+

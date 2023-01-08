@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 // Import and require mysql2
-// const mysql = require('mysql2');
+const mysql = require('mysql2');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -12,6 +12,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static('public'));
+
+
+//.ejs stuff
+app.set('view engine', 'ejs');
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended:true}));
+
 
 app.get('/', (req, res) => 
   res.sendFile(path.join(__dirname, '/public/index.html'))
@@ -54,35 +62,52 @@ app.get('/travel', (req, res) =>
 );
 
 // Connect to database
-// const db = mysql.createConnection(
-//   {
-//     host: 'localhost',
-//     // MySQL username,
-//     user: 'root',
-//     // TODO: Add MySQL password here
-//     password: 'rootroot',
-//     database: 'movies_db'
-//   },
-//   console.log(`Connected to the movies_db database.`)
-// );
+const db = mysql.createConnection(
+  {
+    host: 'localhost',
+    // MySQL username,
+    user: 'root',
+    // TODO: Add MySQL password here
+    password: 'rootroot',
+    database: 'wedding_db'
+  },
+  console.log(`Connected to the wedding_db database.`)
+);
 
-// // Create a movie
-// app.post('/api/new-movie', ({ body }, res) => {
-//   const sql = `INSERT INTO movies (movie_name)
-//     VALUES (?)`;
-//   const params = [body.movie_name];
-  
-//   db.query(sql, params, (err, result) => {
-//     if (err) {
-//       res.status(400).json({ error: err.message });
-//       return;
-//     }
-//     res.json({
-//       message: 'success',
-//       data: body
-//     });
-//   });
-// });
+//query database
+db.query('SELECT * FROM guests', function (err, results) {
+  console.log(results);
+});
+
+app.get('/rsvp',function(req, res){
+  db.connect(function(error){
+    if(error) console.log(error);
+
+    var sql = "SELECT * FROM guests";
+
+    db.query(sql,function(error, result){
+      if(error) console.log(error);
+      res.render(__dirname+"/rsvp",{guests:result});
+    });
+  });
+});
+
+app.get('/search',function(req,res){
+
+  var name =req.query.first_name.last_name;
+
+  db.connect(function(error){
+    if(error) console.log(error);
+
+    var sql = "SELECT * FROM guests where first_name LIKE '%"+first_name+"%' AND last_name LIKE '%"+last_name+"%'";
+
+    db.query(sql, function(error, result){
+      if(error)console.log(error);
+      res.render(__dirname+"/search",{guests:result});
+    });
+  });
+});
+
 
 // // Read all movies
 // app.get('/api/movies', (req, res) => {

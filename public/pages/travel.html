@@ -53,25 +53,89 @@
     </button>
     
 </div>
-<!-- <section class="details2">
-    <div class="content2">
-        <h1>RECEPTION</h1>
-        <h3>SATURDAY, MONTH DD, YEAR</h3>
-     <h3>3:30 PM - 11:00 PM</h3>
-        <p>Name Of The Location</p>
-        <p>1234, Main St. Bloomington, IL, 61761</p>
-        <p>Attire: Semi Formal</p>
-</div>
+<div id = "formContainer" class ="formContainer">
+        <aside>
+            <h2>Check Weather in Bloomington, IL</h2>
+            <form>
+                <input id="userInput" type="text" placeholder="Bloomington" />
+                <button id="searchBtn" class="btn btn-secondary my-2 my-sm-0" type="submit">Check Weather</button>
+           
+            </form>
+            <hr>
+            <div id = "searchHistoryContainer"></div>
+        </aside>
+    </div>
+
+    <div id = "todayCard" class="todayCard" style="width: 63rem;">
+        <p id = "time"></p>
+        <div id="city" class="card-header">
+          City:   
+        </div> 
+        <ul class="list-group list-group-flush">
+          <li id= "temp" class="list-group-item">Temp:</li>
+          <li id="wind" class="list-group-item">Wind:</li>
+          <li id="humidity" class="list-group-item">Humidity:</li>
+          <li id="uv" class="list-group-item">UV Index:</li>
+        </ul>
+      </div>
+    
+    <div class="five-day">
+        <div class="card" width="width: 18rem">
+            <ul class="list-group list-group-flush">
+                <li id= "timeWeek-1" class="list-group-item"></li>
+                <li id= "temp-1" class="list-group-item">Temp:</li>
+                <li id="wind-1" class="list-group-item">Wind:</li>
+                <li id="humidity-1" class="list-group-item">Humidity:</li>
+              </ul> 
+        </div>
+        <div class="card" width="width: 18rem,">
+            <ul class="list-group list-group-flush">
+                <li id= "timeWeek-2" class="list-group-item"></li>
+                <li id= "temp-2" class="list-group-item">Temp:</li>
+                <li id="wind-2" class="list-group-item">Wind:</li>
+                <li id="humidity-2" class="list-group-item">Humidity:</li>
+              </ul> 
+        </div>
+        <div class="card" width="width: 18rem">
+            <ul class="list-group list-group-flush">
+                <li id= "timeWeek-3" class="list-group-item"></li>
+                <li id= "temp-3" class="list-group-item">Temp:</li>
+                <li id="wind-3" class="list-group-item">Wind:</li>
+                <li id="humidity-3" class="list-group-item">Humidity:</li>
+              </ul> 
+        </div>
+        <div class="card" width="width: 18rem">
+            <ul class="list-group list-group-flush">
+                <li id= "timeWeek-4" class="list-group-item"></li>
+                <li id= "temp-4" class="list-group-item">Temp:</li>
+                <li id="wind-4" class="list-group-item">Wind:</li>
+                <li id="humidity-4" class="list-group-item">Humidity:</li>
+
+              </ul> 
+        </div>
+        <div class="card" width="width: 18rem">
+            <ul class="list-group list-group-flush">
+                <li id= "timeWeek-5" class="list-group-item"></li>
+                <li id= "temp-5" class="list-group-item">Temp:</li>
+                <li id="wind-5" class="list-group-item">Wind:</li>
+                <li id="humidity-5" class="list-group-item">Humidity:</li>
+              </ul> 
+        </div>
+    </div>
 </section> -->
 
 <!-- header section ends-->
 
 <!-- jquery cdn link-->
-    <script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"</script>
+    <!-- <script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"</script>
     <script> src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 <!-- custom link-->
-    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/script2.js"></script>
     
 
 </body>
