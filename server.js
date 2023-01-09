@@ -15,10 +15,12 @@ app.use(express.static('public'));
 
 
 //.ejs stuff
-app.set('view engine', 'ejs');
-var bodyParser = require('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended:true}));
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+app.set('views', __dirname);
+// var bodyParser = require('body-parser');
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended:true}));
 
 
 app.get('/', (req, res) => 
@@ -83,27 +85,28 @@ app.get('/rsvp',function(req, res){
   db.connect(function(error){
     if(error) console.log(error);
 
-    var sql = "SELECT * FROM guests";
+    const sql = "SELECT * FROM guests";
 
     db.query(sql,function(error, result){
       if(error) console.log(error);
-      res.render(__dirname+"/rsvp",{guests:result});
+      res.render(__dirname+'/public/pages/rsvp.html',{guests:result});
     });
   });
 });
 
 app.get('/search',function(req,res){
 
-  var name =req.query.first_name.last_name;
+  var first_name =req.query.first_name;
+  var last_name =req.query.last_name;
 
   db.connect(function(error){
     if(error) console.log(error);
 
-    var sql = "SELECT * FROM guests where first_name LIKE '%"+first_name+"%' AND last_name LIKE '%"+last_name+"%'";
+    const sql = "SELECT * FROM guests WHERE first_name LIKE '%"+first_name+"%' AND last_name LIKE '%"+last_name+"%'";
 
     db.query(sql, function(error, result){
       if(error)console.log(error);
-      res.render(__dirname+"/search",{guests:result});
+      res.render(__dirname+'/public/pages/rsvp.html',{guests:result});
     });
   });
 });
