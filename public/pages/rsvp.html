@@ -37,11 +37,26 @@
 </header>
 
 <h2>Please RSVP!</h2>
-            <form action="/search">
-                <input type="search" name="first_name" placeholder="Full Name"/>
-                <button id="searchBtn" class="btn btn-secondary my-2 my-sm-0" type="submit">Find Your Invitation</button>
-           
-            </form>
+            <div>
+                <input id="search-input" name="first_name" placeholder="Full Name"/>
+                <button id="search-btn" class="btn btn-secondary my-2 my-sm-0" type="submit">Find Your Invitation</button>
+            </div>
+            <table id="table">
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date Added</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+    
+            <section hidden id="update-row">
+                <label>Name:</label>
+                <input type="text" id="update-name-input">
+                <button id="update-row-btn">Update</button>
+            </section>
 
 <!-- header section ends-->
 
@@ -49,7 +64,7 @@
     <script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"</script>
 
 <!-- custom link-->
-    <!-- <script src="/assets/js/script.js"></script> -->
+    <script src="/assets/js/rsvp.js"></script>
 
 </body>
 </html>

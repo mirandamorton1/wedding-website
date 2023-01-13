@@ -1,17 +1,22 @@
 const express = require('express');
 const path = require('path');
-// Import and require mysql2
-const mysql = require('mysql2');
+const cors = require('cors');
+// const dotenv = require('dotenv');
+// dotenv.config();
+const bodyParser = require("body-parser"); 
+
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+const dbService = require('./dbService');
 
 // Express middleware
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(express.static('public'));
+app.use(cors());
 
 
 //.ejs stuff
@@ -19,8 +24,8 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname);
 // var bodyParser = require('body-parser');
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended:true}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended:false}));
 
 
 app.get('/', (req, res) => 
@@ -63,53 +68,95 @@ app.get('/travel', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/pages/travel.html'))
 );
 
-// Connect to database
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    // MySQL username,
-    user: 'root',
-    // TODO: Add MySQL password here
-    password: 'rootroot',
-    database: 'wedding_db'
-  },
-  console.log(`Connected to the wedding_db database.`)
-);
+// create
+// app.post('/insert', (request, response) => {
+//   const { name } = request.body;
+//   const db = dbService.getDbServiceInstance();
+  
+//   const result = db.insertNewName(name);
 
-//query database
-db.query('SELECT * FROM guests', function (err, results) {
-  console.log(results);
+//   result
+//   .then(data => response.json({ data: data}))
+//   .catch(err => console.log(err));
+// });
+
+// read
+app.get('/getAll', (request, response) => {
+  const db = dbService.getDbServiceInstance();
+
+  const result = db.getAllData();
+  
+  result
+  .then(data => response.json({data : data}))
+  .catch(err => console.log(err));
+})
+
+// update
+app.patch('/update', (request, response) => {
+  const { id, name } = request.body;
+  const db = dbService.getDbServiceInstance();
+
+  const result = db.updateNameById(id, name);
+  
+  result
+  .then(data => response.json({success : data}))
+  .catch(err => console.log(err));
 });
 
-app.get('/rsvp',function(req, res){
-  db.connect(function(error){
-    if(error) console.log(error);
+// delete
+// app.delete('/delete/:id', (request, response) => {
+//   const { id } = request.params;
+//   const db = dbService.getDbServiceInstance();
 
-    const sql = "SELECT * FROM guests";
+//   const result = db.deleteRowById(id);
+  
+//   result
+//   .then(data => response.json({success : data}))
+//   .catch(err => console.log(err));
+// });
 
-    db.query(sql,function(error, result){
-      if(error) console.log(error);
-      res.render(__dirname+'/public/pages/rsvp.html',{guests:result});
-    });
-  });
-});
+app.get('/search/:first_name', (request, response) => {
+  const { first_name } = request.params;
+  const db = dbService.getDbServiceInstance();
 
-app.get('/search',function(req,res){
+  const result = db.searchByName(first_name);
+  
+  result
+  .then(data => response.json({data : data}))
+  .catch(err => console.log(err));
+})
 
-  var first_name =req.query.first_name;
-  var last_name =req.query.last_name;
+// app.listen(process.env.PORT, () => console.log('app is running on port http://localhost:${PORT}`'));
 
-  db.connect(function(error){
-    if(error) console.log(error);
+// app.get('/rsvp',function(req, res){
+//   db.connect(function(error){
+//     if(error) console.log(error);
 
-    const sql = "SELECT * FROM guests WHERE first_name LIKE '%"+first_name+"%' AND last_name LIKE '%"+last_name+"%'";
+//     const sql = "SELECT * FROM guests";
 
-    db.query(sql, function(error, result){
-      if(error)console.log(error);
-      res.render(__dirname+'/public/pages/rsvp.html',{guests:result});
-    });
-  });
-});
+//     db.query(sql,function(error, result){
+//       if(error) console.log(error);
+//       res.render(__dirname+'/public/pages/rsvp.html',{guests:result});
+//     });
+//   });
+// });
+
+// app.get('/search',function(req,res){
+
+//   var first_name =req.query.first_name;
+//   var last_name =req.query.last_name;
+
+//   db.connect(function(error){
+//     if(error) console.log(error);
+
+//     const sql = "SELECT * FROM guests WHERE first_name LIKE '%"+first_name+"%' AND last_name LIKE '%"+last_name+"%'";
+
+//     db.query(sql, function(error, result){
+//       if(error)console.log(error);
+//       res.render(__dirname+'/public/pages/rsvp.html',{guests:result});
+//     });
+//   });
+// });
 
 
 // // Read all movies
