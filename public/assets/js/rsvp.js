@@ -1,21 +1,17 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     fetch('http://localhost:3001/getAll')
-//     .then(response => response.json())
-//     .then(data => loadHTMLTable(data['data']));
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('http://localhost:3001/getAll')
+    .then(response => response.json())
+    .then(data => loadHTMLTable(data['data']));
     
-// });
+});
 
 document.querySelector('table tbody').addEventListener('click', function(event) {
-    if (event.target.className === "delete-row-btn") {
-        deleteRowById(event.target.dataset.id);
-    }
-    if (event.target.className === "edit-row-btn") {
         handleEditRow(event.target.dataset.id);
-    }
 });
 
 const updateBtn = document.querySelector('#update-row-btn');
 const searchBtn = document.querySelector('#search-btn');
+
 
 searchBtn.onclick = function() {
     const searchValue = document.querySelector('#search-input').value;
@@ -25,27 +21,17 @@ searchBtn.onclick = function() {
     .then(data => loadHTMLTable(data['data']));
 }
 
-function deleteRowById(id) {
-    fetch('http://localhost:3001/delete/' + id, {
-        method: 'DELETE'
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            location.reload();
-        }
-    });
-}
+
 
 function handleEditRow(id) {
     const updateSection = document.querySelector('#update-row');
     updateSection.hidden = false;
     document.querySelector('#update-name-input').dataset.id = id;
+    console.log("That's me!");
 }
 
 updateBtn.onclick = function() {
     const updateNameInput = document.querySelector('#update-name-input');
-
 
     console.log(updateNameInput);
 
@@ -56,7 +42,7 @@ updateBtn.onclick = function() {
         },
         body: JSON.stringify({
             id: updateNameInput.dataset.id,
-            name: updateNameInput.value
+            attending: updateNameInput.value
         })
     })
     .then(response => response.json())
@@ -65,40 +51,6 @@ updateBtn.onclick = function() {
             location.reload();
         }
     })
-}
-
-
-const addBtn = document.querySelector('#add-name-btn');
-
-
-
-function insertRowIntoTable(data) {
-    console.log(data);
-    const table = document.querySelector('table tbody');
-    const isTableData = table.querySelector('.no-data');
-
-    let tableHtml = "<tr>";
-
-    for (var key in data) {
-        if (data.hasOwnProperty(key)) {
-            if (key === 'dateAdded') {
-                data[key] = new Date(data[key]).toLocaleString();
-            }
-            tableHtml += `<td>${data[key]}</td>`;
-        }
-    }
-
-    tableHtml += `<td><button class="delete-row-btn" data-id=${data.id}>Delete</td>`;
-    tableHtml += `<td><button class="edit-row-btn" data-id=${data.id}>Edit</td>`;
-
-    tableHtml += "</tr>";
-
-    if (isTableData) {
-        table.innerHTML = tableHtml;
-    } else {
-        const newRow = table.insertRow();
-        newRow.innerHTML = tableHtml;
-    }
 }
 
 function loadHTMLTable(data) {
@@ -111,15 +63,15 @@ function loadHTMLTable(data) {
 
     let tableHtml = "";
 
-    data.forEach(function ({id, first_name, date_added}) {
+    data.forEach(function ({id, full_name, attending}) {
         tableHtml += "<tr>";
         tableHtml += `<td>${id}</td>`;
-        tableHtml += `<td>${first_name}</td>`;
-        tableHtml += `<td>${new Date(date_added).toLocaleString()}</td>`;
-        tableHtml += `<td><button class="delete-row-btn" data-id=${id}>Delete</td>`;
-        tableHtml += `<td><button class="edit-row-btn" data-id=${id}>Edit</td>`;
-        tableHtml += "</tr>";
+        tableHtml += `<td>${full_name}</td>`;
+        tableHtml += `<td>${attending}</td>`;
+        tableHtml += `<td><button class="edit-row-btn" data-id=${id}>That's me!</td>`;
+        tableHtml += "</tr>"; 
     });
 
     table.innerHTML = tableHtml;
+   
 }

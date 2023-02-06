@@ -38,28 +38,35 @@
 
 <h2>Please RSVP!</h2>
             <div>
-                <input id="search-input" name="first_name" placeholder="Full Name"/>
+                <input id="search-input" name="full_name" placeholder="Full Name"/>
                 <button id="search-btn" class="btn btn-secondary my-2 my-sm-0" type="submit">Find Your Invitation</button>
             </div>
             <table id="table">
                 <thead>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Date Added</th>
-                    <th>Delete</th>
-                    <th>Edit</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
                 </thead>
                 <tbody></tbody>
             </table>
     
             <section hidden id="update-row">
-                <label>Name:</label>
+                
+                <label>Will you be joining us?</label>
                 <input type="text" id="update-name-input">
+                <input type="radio" id="true" name="attending" value="Yes" onclick="myFunction(this.value)">Yes
+                <input type="radio" id="false" name="attending" value="No" onclick="myFunction(this.value)">No
                 <button id="update-row-btn">Update</button>
+                
             </section>
 
 <!-- header section ends-->
-
+    <script>
+    function myFunction(attending) {
+      document.getElementById("update-name-input").value = attending;
+    }
+    </script>
 <!-- jquery cdn link-->
     <script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"</script>
 

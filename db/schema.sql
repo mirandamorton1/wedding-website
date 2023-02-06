@@ -9,3 +9,9 @@ CREATE TABLE guests (
   last_name VARCHAR(30) NOT NULL,
   attending BOOLEAN NOT NULL
 );
+
+CREATE TABLE guest (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  full_name VARCHAR(30) NOT NULL,
+  attending BOOLEAN NOT NULL
+);

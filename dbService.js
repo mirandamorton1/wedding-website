@@ -1,9 +1,9 @@
 // Import and require mysql2
 const mysql = require('mysql2');
 
-// const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 let instance = null;
-// dotenv.config();
+dotenv.config();
 
 // Connect to database
 const db = mysql.createConnection(
@@ -13,13 +13,13 @@ const db = mysql.createConnection(
       user: 'root',
       // TODO: Add MySQL password here
       password: 'rootroot',
-      database: 'wedding_db'
+      database: 'wedding_db',
     },
     console.log(`Connected to the wedding_db database.`)
 );
   
 //query database
-db.query('SELECT * FROM guests', function (err, results) {
+db.query('SELECT * FROM guest', function (err, results) {
     console.log(results);
 });
 
@@ -33,7 +33,7 @@ class DbService {
     async getAllData() {
         try {
             const response = await new Promise((resolve, reject) => {
-                const query = "SELECT * FROM guests";
+                const query = "SELECT * FROM guest";
 
                 db.query(query, (err, results) => {
                     if (err) reject(new Error(err.message));
@@ -47,32 +47,13 @@ class DbService {
         }
     }
     
-    async deleteRowById(id) {
+    async updateNameById(id, attending) {
         try {
             id = parseInt(id, 10); 
             const response = await new Promise((resolve, reject) => {
-                const query = "DELETE FROM guests WHERE id = ?";
+                const query = "UPDATE guest SET attending = ?  WHERE id = ?";
     
-                connection.query(query, [id] , (err, result) => {
-                    if (err) reject(new Error(err.message));
-                    resolve(result.affectedRows);
-                })
-            });
-    
-            return response === 1 ? true : false;
-        } catch (error) {
-            console.log(error);
-            return false;
-        }
-    }
-    
-    async updateNameById(id, name) {
-        try {
-            id = parseInt(id, 10); 
-            const response = await new Promise((resolve, reject) => {
-                const query = "UPDATE names SET name = ? WHERE id = ?";
-    
-                db.query(query, [name, id] , (err, result) => {
+                db.query(query, [attending, id] , (err, result,) => {
                     if (err) reject(new Error(err.message));
                     resolve(result.affectedRows);
                 })
@@ -85,12 +66,16 @@ class DbService {
         }
     }
 
-    async searchByName(first_name) {
+    async searchByName(full_name) {
         try {
             const response = await new Promise((resolve, reject) => {
-                const query = "SELECT * FROM guests WHERE first_name = ?;";
+                const query = "SELECT * FROM guest WHERE full_name = ?;";
 
-                db.query(query, [first_name], (err, results) => {
+                // const query = "SELECT CONCAT(WHERE first_name = ?, ' ', WHERE last_name = ?) AS name FROM guests"
+
+                // const query = "SELECT * FROM guests WHERE CONCAT(first_name, ' ', last_name) LIKE 'searchValue%'"
+
+                db.query(query, [full_name], (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
                 })
