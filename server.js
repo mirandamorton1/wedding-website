@@ -99,7 +99,7 @@ app.get('/search/:full_name', (request, response) => {
   const result = db.searchByName(full_name);
   
   result
-  .then(data => response.json({success : data}))
+  .then(data => response.json({data : data}))
   .catch(err => console.log(err));
 })
 
