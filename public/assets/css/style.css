@@ -15,8 +15,8 @@ html{
 }
 
 section{
-    padding:0 7%;
-    padding-top: 25rem;
+    /* padding:0 7%;
+    padding-top: 25rem; */
 }
 
 
@@ -89,7 +89,7 @@ header .navbar ul li a:hover{
 
 #count-body h1{
     font-size: 2rem;
-    padding-right: 4rem;
+    padding-right: 2rem;
     letter-spacing: .25rem;
 }
 
@@ -98,6 +98,8 @@ header .navbar ul li a:hover{
 }
 
 .story{
+    padding:0 7%;
+    padding-top: 25rem;
     padding-top: 2rem;
     display: flex;
     align-items: center;
@@ -122,14 +124,17 @@ header .navbar ul li a:hover{
 }
 
 .hero {
-    height: 800px;
-    background-position: no-repeat;
-    background-size: cover;
+    height: 70vh;
+    width: 100vw;
+    display: table-cell;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     position:relative;
     background-image: url("/assets/images/homephoto.png");
-
 }
-
 .active {
     border-bottom: 2px solid black;
 }
@@ -168,71 +173,42 @@ button {
     text-align: center;
 }
 
-.details1{
+.details{
     padding-top: 2rem;
-    display:inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
-    float:left;
+    justify-content: center;
+    flex-wrap:wrap;
 }
 
-.details2{
-    padding-top: 2rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-around;
-    float:right;
+.details .content{
+    flex: 1 -1 40rem;
+    padding: 4rem;
 }
 
-.details1 .content1{
-    flex: 1 1 40rem;
-}
-
-.details1 .content1 h1{
+.details .content h1{
     font-size: 3rem;
     color:rgb(105, 101, 101);
     letter-spacing: .25rem;
     margin-bottom: .25rem;
 }
 
-.details1 .content1 h3{
+.details .content h3{
     font-size: 2rem;
     color:rgb(105, 101, 101);
     letter-spacing: .25rem;
     
 }
 
-.details1 .content1 p{
-    font-size: 2rem;
-    color:rgb(105, 101, 101);
-    letter-spacing: .25rem;
-}
-
-.details2 .content2{
-    flex: 1 1 40rem
-}
-
-.details2 .content2 h1{
-    font-size: 3rem;
-    color:rgb(105, 101, 101);
-    letter-spacing: .25rem;
-    margin-bottom: .25rem;
-}
-
-.details2 .content2 h3{
-    font-size: 2rem;
-    color:rgb(105, 101, 101);
-    letter-spacing: .25rem;
-    
-}
-
-.details2 .content2 p{
+.details .content p{
     font-size: 2rem;
     color:rgb(105, 101, 101);
     letter-spacing: .25rem;
 }
 
 .travel{
+    padding:0 7%;
+    padding-top: 25rem;
     padding-top: 2rem;
     display: flex;
     align-items: center;
@@ -270,6 +246,8 @@ button {
 }
 
 .shuttle{
+    padding:0 7%;
+    padding-top: 25rem;
     padding-top: 2rem;
     display: flex;
     align-items: center;
@@ -294,6 +272,8 @@ button {
 }
 
 .todo{
+    padding:0 7%;
+    padding-top: 25rem;
     padding-top: 2rem;
     display:block;
     align-items: center;
@@ -332,13 +312,43 @@ button {
 
 .party {
     align-items: center;
+    padding:0 26%;
+    padding-top: 10rem;
 }
 
+.party .content ul {
+    grid-template-columns: repeat(2, auto);
+    /* justify-content: start; */
+    list-style-type: disc;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style-position: inside;
+    list-style-type: none;
+}
 
-.party .content p{
+.party .content ul li {
+    display:grid;
     font-size: 1.8rem;
     color:rgb(105, 101, 101);
     letter-spacing: .25rem;
+    padding-bottom: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 75px;
+    color:rgb(105, 101, 101);
+}
+
+footer h1 {
+    font-size: 3rem;
+    font-weight:lighter;
+}
+
+footer p {
+    font-size: 2rem;
+    font-weight:lighter;
 }
 
 /* media queries */
@@ -348,44 +358,45 @@ button {
         font-size: 50%;
     }
 
-    header{
-        display: felx;
+header{
+        display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 1rem;
     }
 
-    header #circle{
+header #circle{
         display:block;
 
     }
 
-    header .navbar{
+header .navbar{
         position: fixed;
         top:6 .2rem; right:0;
         height: 100%;
         width: 100%;
     }
 
-    header .navbar ul{
+header .navbar ul{
         height:100%;
         width:100%;
         flex-flow: column;
         padding-bottom: 15rem;
     }
 
-    header .navbar ul li{
+header .navbar ul li{
         text-align: center;
         width:100%;
         margin:1rem 0;
     }
 
-    header .navbar ul li a{
+header .navbar ul li a{
         font-size: 2rem;
         display: block;
     }
 
 }
+
 .formContainer {
     /* border:solid black;
     border-width: 1px; */
@@ -428,3 +439,4 @@ button {
    .background-yellow {
        color: yellow;
    }
+   
