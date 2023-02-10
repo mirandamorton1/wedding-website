@@ -351,6 +351,15 @@ footer p {
     font-weight:lighter;
 }
 
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:black;
+    height: 1px;
+  }
+
 /* media queries */
 
 @media (max-width:500px){
