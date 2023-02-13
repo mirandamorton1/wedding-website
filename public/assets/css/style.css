@@ -349,6 +349,7 @@ button {
     letter-spacing: .25rem;
     margin-bottom: 2rem;
     align-items: center;
+    padding: -1 15%;
 }
 
 .rsvp h2{
@@ -357,6 +358,7 @@ button {
     letter-spacing: .25rem;
     margin-bottom: 8rem;
     align-items: center;
+    padding: 0 15%;
 }
 
 .search{
@@ -375,6 +377,22 @@ button {
     height: 40px;
     font-size: 20px;
 }
+
+#table{
+    font-size: 25px;
+    padding: 0 15%;
+}
+
+#update-row {
+    font-size: 10px;
+    padding: 0 15%;
+}
+
+input[type='radio'] {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+  }
 
 footer {
     text-align: center;

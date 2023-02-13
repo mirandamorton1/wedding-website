@@ -90,9 +90,9 @@ function loadHTMLTable(data) {
 
     data.forEach(function ({id, full_name, attending}) {
         tableHtml += "<tr>";
-        tableHtml += `<td>${id}</td>`;
+        // tableHtml += `<td>${id}</td>`;
         tableHtml += `<td>${full_name}</td>`;
-        tableHtml += `<td>${attending}</td>`;
+        // tableHtml += `<td>${attending}</td>`;
         tableHtml += `<td><button class="edit-row-btn" data-id=${id}>That's me!</td>`;
         tableHtml += "</tr>"; 
     });
