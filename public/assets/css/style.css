@@ -335,6 +335,47 @@ button {
     padding-bottom: 50px;
 }
 
+.rsvp{
+    padding:0 33%;
+    padding-top: 5rem;
+    align-items:center;
+    display:block;
+    justify-content: space-around;
+}
+
+.rsvp h1{
+    font-size: 4rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.rsvp h2{
+    font-size: 2rem;
+    color:rgb(105, 101, 101);
+    letter-spacing: .25rem;
+    margin-bottom: 8rem;
+    align-items: center;
+}
+
+.search{
+    display: grid;
+}
+
+#search-btn {
+    cursor:pointer;
+}
+
+#search-input {
+    display: grid;
+    border-style: solid;
+    border-width: .75px;
+    /* width: 275px; */
+    height: 40px;
+    font-size: 20px;
+}
+
 footer {
     text-align: center;
     padding: 75px;
@@ -409,24 +450,35 @@ header .navbar ul li a{
 .formContainer {
     /* border:solid black;
     border-width: 1px; */
+    padding:0 7%;
+    padding-top: 5rem;
     display: inline-block;
     margin-left: 10px;
     margin-top: 5px;
    }
    
    .todayCard {
-       border: solid black;
-       border-width: 1px;
+       /* border: solid black;
+       border-width: 1px; */
        display: inline-block;
-       margin-top: 10px;
+       margin-top: 5px;
+       list-style-type: none;
+   }
+
+   .list-group-item {
+    list-style-type: none;
    }
    
    #city {
-       font-size:30px;
+       font-size:20px;
    }
    
    #time {
-       font-size: 25px;
+       font-size: 20px;
+   }
+
+   #temp {
+    font-size: 20px;
    }
    
    .card {
@@ -434,18 +486,9 @@ header .navbar ul li a{
    }
    
    .five-day {
-       align-items: right;
+    padding:0 7%;
+    padding-top: 2rem;
+    align-items: center;
    }
    
-   .background-red {
-       color: red;
-   }
-   
-   .background-green {
-       color: green;
-   }
-   
-   .background-yellow {
-       color: yellow;
-   }
    

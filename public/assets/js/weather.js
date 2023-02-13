@@ -41,8 +41,8 @@ function renderSearchHistory(){
     }
     
     
-    //History Feature .. use local storage
-    // getSearchHistory();
+    // History Feature .. use local storage
+    getSearchHistory();
 
 
 function getIcon(iconType) {
@@ -127,7 +127,7 @@ function fetchLocation(userInput) {
 
             });
             //forecast
-            var cnt = 6;
+        var cnt = 6;
         fetch(
             "https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&cnt=" + cnt+ "&units=imperial&appid=c10bb3bd22f90d636baa008b1529ee25"
         ) 
