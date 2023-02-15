@@ -72,7 +72,7 @@ function fetchLocation(userInput) {
     // fetch Weather(data we recieved from fetchlocation)
     console.log(userInput)
     fetch(
-        "https://api.openweathermap.org/data/2.5/weather?lat=44.8408&lon=-93.2983&units=imperial&appid=2b4f64abd099e1c41243e3911cd18532"
+        "https://api.openweathermap.org/data/2.5/weather?lat=40.4788&lon=-88.9927&units=imperial&appid=2b4f64abd099e1c41243e3911cd18532"
     )
         .then(function (response){
             return response.json()

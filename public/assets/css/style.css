@@ -492,11 +492,11 @@ header .navbar ul li a{
 .todayCard {
     display:inline-block;
     padding: 30px;
-    border: solid rgb(57, 57, 220);
+    border: none;
     border-width: 1px;
     border-radius: 3rem;;
     width: 20rem;
-    background-color: rgb(57, 57, 220);
+    background: linear-gradient(rgb(239, 177, 62), rgb(249, 126, 32));
     }
 
 .today {
@@ -611,9 +611,11 @@ header .navbar ul li a{
 .card {
        display:inline-block;
        padding: 30px;
-       border: solid rgb(105, 101, 101);
+       border: none;
        border-width: 1px;
-       border-radius: 3rem;;
+       border-radius: 3rem;
+       background: linear-gradient(rgb(75, 75, 217), rgb(27, 27, 135));
+       color: white;
    }
    
 .five-day {
