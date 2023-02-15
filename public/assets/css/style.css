@@ -54,29 +54,29 @@ header #circle{
 }
 
 header .navbar ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    padding: 1rem;
-    cursor: default;
-    flex-wrap:wrap;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    list-style: none!important;
+    padding: 1rem!important;
+    cursor: default!important;
+    flex-wrap:wrap!important;
 }
 
 header .navbar ul li{
-    margin:0 1.5rem;
-    justify-content:space-between;
+    margin:0 1.5rem!important;
+    justify-content:space-between!important;
 }
 
 header .navbar ul li a{
-    font-size: 1.75rem;
-    color:rgb(105, 101, 101);
-    letter-spacing: .25rem;
+    font-size: 1.75rem!important;
+    color:rgb(105, 101, 101)!important;
+    letter-spacing: .25rem!important;
 
 }
 
 header .navbar ul li a:hover{
-    border-bottom: 2px solid rgb(105, 101, 101);
+    border-bottom: 2px solid rgb(105, 101, 101)!important;
     
 }
 
@@ -608,7 +608,7 @@ header .navbar ul li a{
     font-size: 18px;
    }
    
-.card {
+.cards {
        display:inline-block;
        padding: 30px;
        border: none;
@@ -623,5 +623,17 @@ header .navbar ul li a{
     padding-top: 2rem;
     align-items: center;
    }
-   
+
+.card-deck .card {
+    float: left;
+    width: 30%;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.card-deck {
+    display: table;
+    padding: 5px;
+    margin-left: 50px;
+}
    
