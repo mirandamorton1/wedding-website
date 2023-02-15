@@ -479,45 +479,141 @@ header .navbar ul li a{
 
 }
 
-.formContainer {
+/* .formContainer {
     /* border:solid black;
     border-width: 1px; */
-    padding:0 7%;
+    /* padding:0 7%;
     padding-top: 5rem;
     display: inline-block;
     margin-left: 10px;
     margin-top: 5px;
-   }
+   } */ 
    
-   .todayCard {
-       /* border: solid black;
-       border-width: 1px; */
-       display: inline-block;
+.todayCard {
+       border: solid rgb(168, 168, 250);
+       border-width: 1px;
+       border-radius: 3rem;
+       width:10px;
+       background-color: rgb(168, 168, 250);
+       align-items: left;
        margin-top: 5px;
+       margin-left: 92px;
+       padding:0 7%;
        list-style-type: none;
-   }
+    }
 
-   .list-group-item {
+.list-group-item {
     list-style-type: none;
    }
    
-   #city {
+#city {
        font-size:20px;
    }
    
-   #time {
+#time {
        font-size: 20px;
    }
 
-   #temp {
+#timeWeek-1 {
+    font-size: 15px;
+}
+
+#temp-1 {
+    font-size: 14px;
+}
+
+#wind-1 {
+    font-size: 14px;
+}
+
+#humidity-1 {
+    font-size: 14px;
+}
+
+#timeWeek-2 {
+    font-size: 15px;
+}
+
+#temp-2 {
+    font-size: 14px;
+}
+
+#wind-2 {
+    font-size: 14px;
+}
+
+#humidity-2 {
+    font-size: 14px;
+}
+
+#timeWeek-3 {
+    font-size: 15px;
+}
+
+#wind-3 {
+    font-size: 14px;
+}
+
+#humidity-3 {
+    font-size: 14px;
+}
+
+#temp-3 {
+    font-size: 14px;
+}
+
+#timeWeek-4 {
+    font-size: 15px;
+}
+
+#temp-4 {
+    font-size: 14px;
+}
+
+#wind-4 {
+    font-size: 14px;
+}
+
+#humidity-4 {
+    font-size: 14px;
+}
+
+#timeWeek-5 {
+    font-size: 15px;
+}
+#temp-5 {
+    font-size: 14px;
+}
+
+#wind-5 {
+    font-size: 14px;
+}
+
+#humidity-5 {
+    font-size: 14px;
+}
+
+#temp {
     font-size: 20px;
    }
-   
-   .card {
-       display:inline-block;
+
+#wind {
+    font-size: 18px;
+   }
+
+#humidity {
+    font-size: 18px;
    }
    
-   .five-day {
+.card {
+       display:inline-block;
+       padding: 30px;
+       border: solid rgb(105, 101, 101);
+       border-width: 1px;
+       border-radius: 3rem;;
+   }
+   
+.five-day {
     padding:0 7%;
     padding-top: 2rem;
     align-items: center;

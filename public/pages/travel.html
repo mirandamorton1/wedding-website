@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
-<body>
+<body onload="fetchLocation()">
 
 <!-- header section starts-->
 <header>
@@ -53,20 +53,28 @@
     </button>
     
 </div>
-<div id = "formContainer" class ="formContainer">
+    <!-- <div id = "formContainer" class ="formContainer">
             <h2>Check Weather in Bloomington, IL</h2>
             <div>
-                <!-- <input id="userInput" type="text" placeholder="Bloomington" /> -->
-                <button id="searchBtn" class="btn btn-secondary my-2 my-sm-0" type="submit">Check Weather</button>
+                <input id="userInput" type="text" placeholder="Bloomington" /> -->
+                <!-- <button id="searchBtn" class="btn btn-secondary my-2 my-sm-0" type="submit">Check Weather</button>
            
             </div>
             <hr>
             <div id = "searchHistoryContainer"></div>
-    </div>
+    </div> --> 
 
-    <div id = "todayCard" class="todayCard" style="width: 40rem;">
-        <p id = "time"></p>
-        <div id="city" class="card-header">
+
+    <!-- <div id = "formContainer" class ="formContainer">
+        <h2>Check Weather in Bloomington, IL</h2>
+        <hr>
+        <div id = "searchHistoryContainer"></div>
+    </div> -->
+
+    <div id = "todayCard" class="todayCard">
+        <!-- <p style ="font-size: 20px;">Local Weather:</p> -->
+        <p id = "city"></p>
+        <div id="time" class="card-header">
           <!-- City:    -->
         </div> 
         <ul class="list-group list-group-flush">
@@ -74,13 +82,12 @@
           <li id="wind" class="list-group-item">Wind:</li>
           <li id="humidity" class="list-group-item">Humidity:</li>
         </ul>
-        <hr>
       </div>
     
     <div class="five-day">
         <div class="card" width="width: 18rem">
             <ul class="list-group list-group-flush">
-                <li id= "timeWeek-1" class="list-group-item"></li>
+                <li style= "text-decoration: underline" id= "timeWeek-1" class="list-group-item"></li>
                 <li id= "temp-1" class="list-group-item">Temp:</li>
                 <li id="wind-1" class="list-group-item">Wind:</li>
                 <li id="humidity-1" class="list-group-item">Humidity:</li>
@@ -88,7 +95,7 @@
         </div>
         <div class="card" width="width: 18rem,">
             <ul class="list-group list-group-flush">
-                <li id= "timeWeek-2" class="list-group-item"></li>
+                <li style= "text-decoration: underline" id= "timeWeek-2" class="list-group-item"></li>
                 <li id= "temp-2" class="list-group-item">Temp:</li>
                 <li id="wind-2" class="list-group-item">Wind:</li>
                 <li id="humidity-2" class="list-group-item">Humidity:</li>
@@ -96,7 +103,7 @@
         </div>
         <div class="card" width="width: 18rem">
             <ul class="list-group list-group-flush">
-                <li id= "timeWeek-3" class="list-group-item"></li>
+                <li style= "text-decoration: underline" id= "timeWeek-3" class="list-group-item"></li>
                 <li id= "temp-3" class="list-group-item">Temp:</li>
                 <li id="wind-3" class="list-group-item">Wind:</li>
                 <li id="humidity-3" class="list-group-item">Humidity:</li>
@@ -104,7 +111,7 @@
         </div>
         <div class="card" width="width: 18rem">
             <ul class="list-group list-group-flush">
-                <li id= "timeWeek-4" class="list-group-item"></li>
+                <li style= "text-decoration: underline" id= "timeWeek-4" class="list-group-item"></li>
                 <li id= "temp-4" class="list-group-item">Temp:</li>
                 <li id="wind-4" class="list-group-item">Wind:</li>
                 <li id="humidity-4" class="list-group-item">Humidity:</li>
@@ -113,7 +120,7 @@
         </div>
         <div class="card" width="width: 18rem">
             <ul class="list-group list-group-flush">
-                <li id= "timeWeek-5" class="list-group-item"></li>
+                <li  id= "timeWeek-5" class="list-group-item"></li>
                 <li id= "temp-5" class="list-group-item">Temp:</li>
                 <li id="wind-5" class="list-group-item">Wind:</li>
                 <li id="humidity-5" class="list-group-item">Humidity:</li>
@@ -127,8 +134,6 @@
 <!-- jquery cdn link-->
     <script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"</script>
     <script> src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
