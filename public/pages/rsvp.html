@@ -55,10 +55,10 @@
     
             <section hidden id="update-row">
                 
-                <label style="font-size: 20px">Will you be joining us?</label>
+                <!-- <label style="font-size: 20px">Will you be joining us?</label> -->
                 <input type="hidden" id="update-name-input">
-                <input type="radio" id="true" name="attending" value="Yes" onclick="myFunction(this.value)">Yes
-                <input type="radio" id="false" name="attending" value="No" onclick="myFunction(this.value)">No
+                <input type="radio" id="true" name="attending" value="Yes" class="answer" onclick="myFunction(this.value)"/><label style="font-size: 20px;">Accept</label>
+                <input type="radio" id="false" name="attending" value="No" class="answer"onclick="myFunction(this.value)"/><label style="font-size: 20px;">Decline</lable>
                 <button id="update-row-btn">Submit</button>
                 
             </section>
