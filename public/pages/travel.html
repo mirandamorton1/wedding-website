@@ -70,19 +70,17 @@
         <hr>
         <div id = "searchHistoryContainer"></div>
     </div> -->
-
-    <div id = "todayCard" class="todayCard">
-        <!-- <p style ="font-size: 20px;">Local Weather:</p> -->
-        <p id = "city"></p>
-        <div id="time" class="card-header">
-          <!-- City:    -->
-        </div> 
-        <ul class="list-group list-group-flush">
-          <li id= "temp" class="list-group-item">Temp:</li>
-          <li id="wind" class="list-group-item">Wind:</li>
-          <li id="humidity" class="list-group-item">Humidity:</li>
-        </ul>
-      </div>
+    <div class="today">
+        <div class="todayCard">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" style = "font-size: 25px;">Bloomington, IL</li>
+                <li style ="text-decoration: underline" id= "time" class="list-group-item"></li>
+                <li id= "temp" class="list-group-item">Temp:</li>
+                <li id="wind" class="list-group-item">Wind:</li>
+                <li id="humidity" class="list-group-item">Humidity:</li>
+            </ul>
+        </div>
+    </div>
     
     <div class="five-day">
         <div class="card" width="width: 18rem">
@@ -120,7 +118,7 @@
         </div>
         <div class="card" width="width: 18rem">
             <ul class="list-group list-group-flush">
-                <li  id= "timeWeek-5" class="list-group-item"></li>
+                <li style = "text-decoration: underline" id= "timeWeek-5" class="list-group-item"></li>
                 <li id= "temp-5" class="list-group-item">Temp:</li>
                 <li id="wind-5" class="list-group-item">Wind:</li>
                 <li id="humidity-5" class="list-group-item">Humidity:</li>

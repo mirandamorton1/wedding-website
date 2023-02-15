@@ -490,17 +490,20 @@ header .navbar ul li a{
    } */ 
    
 .todayCard {
-       border: solid rgb(168, 168, 250);
-       border-width: 1px;
-       border-radius: 3rem;
-       width:10px;
-       background-color: rgb(168, 168, 250);
-       align-items: left;
-       margin-top: 5px;
-       margin-left: 92px;
-       padding:0 7%;
-       list-style-type: none;
+    display:inline-block;
+    padding: 30px;
+    border: solid rgb(57, 57, 220);
+    border-width: 1px;
+    border-radius: 3rem;;
+    width: 20rem;
+    background-color: rgb(57, 57, 220);
     }
+
+.today {
+    padding:0 7%;
+    padding-top: 2rem;
+    align-items: center;
+}
 
 .list-group-item {
     list-style-type: none;
