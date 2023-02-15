@@ -75,6 +75,7 @@ updateBtn.onclick = function() {
     .then(data => {
         if (data.success) {
             location.reload();
+            alert("Thank you for your response!");
         }
     })
 }
