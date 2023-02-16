@@ -358,7 +358,7 @@ button {
     letter-spacing: .25rem;
     margin-bottom: 8rem;
     align-items: center;
-    padding: 0 15%;
+    padding: -1 15%;
 }
 
 .search{
