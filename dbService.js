@@ -5,8 +5,12 @@ const dotenv = require('dotenv');
 let instance = null;
 dotenv.config();
 
-// Connect to database
-const db = mysql.createConnection(
+let db;
+
+if(process.env.JAWSDB_URL) {
+  db = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+db = mysql.createConnection(
     {
       host: 'localhost',
       // MySQL username,
@@ -17,6 +21,7 @@ const db = mysql.createConnection(
     },
     console.log(`Connected to the wedding_db database.`)
 );
+}
   
 //query database
 db.query('SELECT * FROM guest', function (err, results) {
