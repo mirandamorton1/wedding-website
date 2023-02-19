@@ -61,4 +61,4 @@
   If you have any questions regarding this app, feel free to contact me: 
   #### GitHub: https://github.com/mirandamorton1   
   #### Email: miranda.morton1@gmail.com
-  This project: https://github.com/mirandamorton1/wedding-website
+  This project: https://wedding-registry-node.herokuapp.com/
