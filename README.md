@@ -29,6 +29,7 @@
 `This project is licensed under MIT`
   ### Tests:
   To test this app, open the file in VS Code, open the terminal and run `node server.js`. 
+  To test this app using the RSVP form, you may enter any of the following names: Seth Smith | Todd Pancake | Erin Bietz
   ### Technology Used:
   - JavaScript
   - Express.js
